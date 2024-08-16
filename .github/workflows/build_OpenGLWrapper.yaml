@@ -27,7 +27,7 @@ jobs:
 
     - name: Verify Build Output
       run: |
-        if [ ! -f build/src/libOpenGLWrapper.a ]; then
+        if [ ! -f build/libOpenGLWrapper.a ]; then
           echo "Build failed: libOpenGLWrapper.a not found"
           exit 1
         fi
