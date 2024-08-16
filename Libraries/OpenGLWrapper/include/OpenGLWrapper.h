@@ -7,7 +7,6 @@
 
 namespace OpenGLWrapper
 {
-  // Déclaration de la fonction initialize
   int initialize();
 }
 

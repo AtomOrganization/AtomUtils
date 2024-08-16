@@ -19,3 +19,5 @@ bin-release/
 # Visual Studio
 .vscode/*
 !.vscode/settings.json
+
+.DS_Store
