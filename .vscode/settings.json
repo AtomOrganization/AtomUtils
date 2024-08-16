@@ -18,5 +18,6 @@
     "titleBar.inactiveBackground": "#ff797999",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#ff7979"
+  "peacock.color": "#ff7979",
+  "cmake.sourceDirectory": "/Users/ribaultadrien/Documents/Projets/ATOM/AtomUtils/Libraries/OpenGLWrapper"
 }

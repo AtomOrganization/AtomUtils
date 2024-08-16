@@ -1,0 +1,33 @@
+name: Build OpenGLWrapper Library
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout source code
+      uses: actions/checkout@v3
+
+    - name: Set up CMake
+      uses: jwlawson/actions-setup-cmake@v1
+
+    - name: Configure CMake
+      run: cmake -S Libraries/OpenGLWrapper -B build -DBUILD_EXAMPLES=OFF
+
+    - name: Build OpenGLWrapper Library
+      run: cmake --build build --target OpenGLWrapper
+
+    - name: Verify Build Output
+      run: |
+        if [ ! -f build/src/libOpenGLWrapper.a ]; then
+          echo "Build failed: libOpenGLWrapper.a not found"
+          exit 1
+        fi
