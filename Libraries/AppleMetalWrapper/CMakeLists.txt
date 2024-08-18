@@ -6,8 +6,8 @@ project(AppleMetalWrapper)
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
-# Ajoute les fichiers source
-add_executable(AppleMetalWrapper src/AppleMetalWrapper.mm src/shader.metal)
+# Ajoute les fichiers source a l'executable
+add_executable(AppleMetalWrapper src/AppleMetalWrapper.mm src/shaders/square.metal src/shaders/triangle.metal)
 
 include_directories(
     ${CMAKE_SOURCE_DIR}/include 

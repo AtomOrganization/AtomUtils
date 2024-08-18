@@ -41,7 +41,7 @@ id<MTLFunction> fragmentFunction = [library newFunctionWithName:@"fragmentShader
 
        // Load compiled shader
         NSError *error = nil;
-        NSURL *libraryURL = [[NSBundle mainBundle] URLForResource:@"shader" withExtension:@"metallib"];
+        NSURL *libraryURL = [[NSBundle mainBundle] URLForResource:@"triangle" withExtension:@"metallib"];
         id<MTLLibrary> library = [_device newLibraryWithURL:libraryURL error:&error];
         if (!library) {
             NSLog(@"Failed to load Metal library: %@", error);
